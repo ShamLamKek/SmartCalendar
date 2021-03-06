@@ -16,22 +16,17 @@ namespace SmartCalendar.Models
         public static string TeacherID = "ContentPlaceHolderArticle_LVrez3_Lprep_";
         #endregion
 
-        public List<string> Time;
+        public List<TimeSpan> Time;
         public List<string> Lesson;
         public List<string> Classroom;
         public List<string> Teacher;
 
-        public Day() { }
-        
-
-        public Day(List<string> time, List<string> lesson, List<string> classroom, List<string> teacher) 
+        public Day()
         {
-            Time = time;
-            Lesson = lesson;
-            Classroom = classroom;
-            Teacher = teacher;
-        
+            Time =  new List<TimeSpan>();
+            Lesson =  new List<string>();
+            Classroom = new List<string>();
+            Teacher = new List<string>();
         }
-        
     }
 }
