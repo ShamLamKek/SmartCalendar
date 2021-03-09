@@ -9,6 +9,29 @@ namespace SmartCalendar.Controllers
 {
     class DayController
     {
+        public static Tuple<List<int>, List<int>> Difference(IWebDriver bs, string id, List<int> list, List<int> list_2)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                try
+                {
+                    var day = bs.FindElement(By.Id(id + i));
+                    list.Add(i);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            for (int i = 1; i < list.Count; i++)
+            {
+
+                list_2.Add(list[i] - 1);
+            }
+            list_2.Add(30);
+
+            return Tuple.Create(list, list_2);
+        }
 
         public static List<string> AddToList(IWebDriver bs, string id, List<string> list)
         {
@@ -46,6 +69,15 @@ namespace SmartCalendar.Controllers
 
             }
             return list;
+        }
+        public static IWebDriver Connection()
+        {
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments(new List<string>() { "headless" });
+            var chromeDriverService = ChromeDriverService.CreateDefaultService();
+            IWebDriver bs = new OpenQA.Selenium.Chrome.ChromeDriver(chromeDriverService, chromeOptions);
+            bs.Navigate().GoToUrl("http://bgu.ru/telek/timetable.aspx?id=30250");
+            return bs;
         }
 
     }

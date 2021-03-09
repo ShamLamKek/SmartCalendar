@@ -21,12 +21,16 @@ namespace SmartCalendar.Models
         public List<string> Classroom;
         public List<string> Teacher;
 
+        public List<int> daysStart;
+        public List<int> daysEnd;
         public Day()
         {
             Time =  new List<TimeSpan>();
             Lesson =  new List<string>();
             Classroom = new List<string>();
             Teacher = new List<string>();
+            daysStart = new List<int>();
+            daysEnd = new List<int>();
         }
     }
 }

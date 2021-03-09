@@ -1,7 +1,3 @@
-E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.csprojAssemblyReference.cache
-E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.AssemblyInfoInputs.cache
-E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.AssemblyInfo.cs
-E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.csproj.CoreCompileInputs.cache
 E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\SmartCalendar.exe
 E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\SmartCalendar.deps.json
 E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\SmartCalendar.runtimeconfig.json
@@ -10,7 +6,12 @@ E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\SmartCalendar.dll
 E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\SmartCalendar.pdb
 E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\WebDriver.dll
+E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.AssemblyInfoInputs.cache
+E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.AssemblyInfo.cs
+E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.csproj.CoreCompileInputs.cache
 E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.csproj.CopyComplete
 E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.dll
 E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.pdb
 E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.genruntimeconfig.cache
+E:\SmartCalendar\SmartCalendar\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+E:\SmartCalendar\SmartCalendar\obj\Debug\netcoreapp3.1\SmartCalendar.csprojAssemblyReference.cache
