@@ -14,6 +14,8 @@ namespace SmartCalendar.Models
         public static string ClassroomID = "ContentPlaceHolderArticle_LVrez3_Lnameroom_";
 
         public static string TeacherID = "ContentPlaceHolderArticle_LVrez3_Lprep_";
+
+        public static string DayID = "ContentPlaceHolderArticle_LVrez3_Lweekday_"; 
         #endregion
 
         public List<TimeSpan> Time;

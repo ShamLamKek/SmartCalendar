@@ -76,9 +76,10 @@ namespace SmartCalendar.Controllers
             chromeOptions.AddArguments(new List<string>() { "headless" });
             var chromeDriverService = ChromeDriverService.CreateDefaultService();
             IWebDriver bs = new OpenQA.Selenium.Chrome.ChromeDriver(chromeDriverService, chromeOptions);
-            bs.Navigate().GoToUrl("http://bgu.ru/telek/timetable.aspx?id=30250");
+            bs.Navigate().GoToUrl("http://bgu.ru/telek/timetable.aspx?id=30251");
             return bs;
         }
+
 
     }
 }

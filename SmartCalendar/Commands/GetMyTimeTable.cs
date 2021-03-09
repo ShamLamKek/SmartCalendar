@@ -12,7 +12,7 @@ namespace SmartCalendar.Commands
 
         public override async void Execute(Message message, TelegramBotClient client)
         {
-            await client.SendTextMessageAsync(message.Chat.Id, "Введите день недели:\nпонедельник\nвторник\nсреда\nчетверг\nпятница\nсуббота");
+            await client.SendTextMessageAsync(message.Chat.Id, "Введите день недели:\nПонедельник\nВторник\nСреда\nЧетверг\nПятница\nСуббота");
         }
     }
 }
