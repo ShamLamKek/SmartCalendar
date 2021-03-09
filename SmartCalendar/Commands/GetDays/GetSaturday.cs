@@ -22,10 +22,45 @@ namespace SmartCalendar.Commands.GetDays
             DayController.AddToList(bs, Day.ClassroomID, Day.Classroom);
             DayController.AddToList(bs, Day.TeacherID, Day.Teacher);
             DayController.Difference(bs, Day.DayID, Day.daysStart, Day.daysEnd);
+            DayController.AddToListOdd(bs, Day.OddID, Day.odd, Day.even);
+            bool odd = DayController.Odd(bs);
+            string mes = null;
             for (int i = Day.daysStart[5]; i <= Day.daysEnd[5]; i++)
             {
+                try
+                {
+                    if (odd == true)
+                    {
+                        if (Day.odd.Exists(x => x == i))
+                            continue;
+                        else
+                        {
+                            mes += Day.Time[i] + " " + Day.Lesson[i] + " " + Day.Classroom[i] + " " + Day.Teacher[i] + "\n";
+                        }
+                    }
+                    else
+                    {
+                        if (Day.even.Exists(x => x == i))
+                            continue;
+                        else
+                        {
+                            mes += Day.Time[i] + " " + Day.Lesson[i] + " " + Day.Classroom[i] + " " + Day.Teacher[i] + "\n";
+                        }
 
-                await client.SendTextMessageAsync(message.Chat.Id, Day.Time[i] + " " + Day.Lesson[i] + " " + Day.Classroom[i] + " " + Day.Teacher[i]);
+                    }
+                }
+                catch (Exception)
+                { 
+
+                }
+            }
+            if (mes != null)
+            {
+                await client.SendTextMessageAsync(message.Chat.Id, "Суббота:\n" + mes);
+            }
+            else
+            {
+                await client.SendTextMessageAsync(message.Chat.Id, "Поздравляю! У вас сегодня нет пар, отдыхайте :)");
             }
         }
     }

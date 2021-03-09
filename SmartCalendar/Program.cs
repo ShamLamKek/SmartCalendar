@@ -26,15 +26,13 @@ namespace SmartCalendar
                                             new GetFriday(),
                                             new GetSaturday()
                                             };
-            
-            client = new TelegramBotClient("1602590774:AAGcAcmV9fdnJzYy5r9633gwcGY6twfiuho");
 
+            client = new TelegramBotClient("1602590774:AAGcAcmV9fdnJzYy5r9633gwcGY6twfiuho");
             client.StartReceiving();
             Console.WriteLine("[Log]: Bot started");
             client.OnMessage += Bot_onMessage;
             Console.ReadLine();
             client.StopReceiving();
-
         }
 
         private static void Bot_onMessage(object sender, MessageEventArgs e)

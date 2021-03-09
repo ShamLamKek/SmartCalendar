@@ -70,15 +70,55 @@ namespace SmartCalendar.Controllers
             }
             return list;
         }
+        public static Tuple<List<int>, List<int>> AddToListOdd(IWebDriver bs, string id, List<int> list, List<int> list_2)
+        {    
+        for (int i = 0; i < 30; i++)
+        {
+            try
+            {
+                var day = bs.FindElement(By.Id(id + i));
+                if (day.Text == "н.")
+                {
+                        list.Add(i);
+                }
+                else if (day.Text=="ч.")
+                {
+                        list_2.Add(i);
+                }
+                    
+            }
+            catch (Exception)
+            { 
+                
+            }
+        }
+            return Tuple.Create(list, list_2);
+        }
+        public static bool Odd(IWebDriver bs)
+        {
+            
+            var day = bs.FindElement(By.Id("ContentPlaceHolderHeader_Lweek"));
+            string text = day.Text;
+            if (text.Contains("ЧЕТНАЯ"))
+            {
+                return true;
+            }
+            else
+                return false;
+            
+            
+        }
+
         public static IWebDriver Connection()
         {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments(new List<string>() { "headless" });
             var chromeDriverService = ChromeDriverService.CreateDefaultService();
             IWebDriver bs = new OpenQA.Selenium.Chrome.ChromeDriver(chromeDriverService, chromeOptions);
-            bs.Navigate().GoToUrl("http://bgu.ru/telek/timetable.aspx?id=30251");
+            bs.Navigate().GoToUrl("http://bgu.ru/telek/timetable.aspx?id=30250");
             return bs;
         }
+
 
 
     }
